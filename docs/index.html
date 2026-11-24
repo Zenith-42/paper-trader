@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paper Trader</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paper Trader">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1a1a19">
+<style>
+:root{--bg:#f4f4f2;--surface:#fcfcfb;--line:#e4e3df;--t1:#0b0b0b;--t2:#52514e;--t3:#7a7975;
+--s1:#2a78d6;--s2:#eb6834;--good:#0a7a0a;--bad:#d03b3b;--chip:#efeeea}
+@media (prefers-color-scheme:dark){:root{--bg:#111110;--surface:#1a1a19;--line:#2e2e2c;--t1:#f0efec;--t2:#c3c2b7;--t3:#8d8c86;
+--s1:#3987e5;--s2:#d95926;--good:#0ca30c;--bad:#e66767;--chip:#262624}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t1);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+padding:calc(env(safe-area-inset-top) + 12px) 14px calc(env(safe-area-inset-bottom) + 76px)}
+h1{font-size:13px;font-weight:600;color:var(--t2);margin:0 0 2px;text-transform:uppercase;letter-spacing:.06em}
+.hero{font-size:36px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sub{color:var(--t2);font-size:13px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.stat .k{font-size:12px;color:var(--t2)}.stat .v{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.up{color:var(--good)}.down{color:var(--bad)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--t2);margin-bottom:6px}
+.sw{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+svg{display:block;width:100%;touch-action:none}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:12px;
+box-shadow:0 4px 14px rgba(0,0,0,.15);white-space:nowrap;display:none;color:var(--t1)}
+.item{padding:11px 0;border-top:1px solid var(--line)}.item:first-child{border-top:0}
+.sym{font-weight:700}.tag{font-size:11px;font-weight:700;padding:2px 7px;border-radius:99px;background:var(--chip);color:var(--t1)}
+.buy{border-left:3px solid var(--good);padding-left:8px}.sell{border-left:3px solid var(--bad);padding-left:8px}
+details summary{list-style:none;cursor:pointer}details summary::-webkit-details-marker{display:none}
+.why{font-size:13px;color:var(--t2);margin-top:3px}
+ul.r{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--t2)}
+.bar{height:6px;border-radius:3px;background:var(--chip);position:relative;margin-top:5px}
+.bar i{position:absolute;top:0;height:6px;border-radius:3px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--surface);border-top:1px solid var(--line);
+padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;border:0;background:none;color:var(--t3);font:600 12px/1 inherit;padding:14px 0}
+nav button.on{color:var(--s1)}
+.view{display:none}.view.on{display:block}
+.empty{color:var(--t2);text-align:center;padding:30px 0}
+table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+td,th{padding:4px 2px;text-align:right;border-top:1px solid var(--line)}th{color:var(--t2);font-weight:600}td:first-child,th:first-child{text-align:left}
+</style>
+</head>
+<body>
+<section id="v-home" class="view on">
+  <h1>Paper portfolio · high risk</h1>
+  <div class="hero" id="equity">—</div>
+  <div class="sub" id="updated">Loading…</div>
+  <div class="stats">
+    <div class="stat"><div class="k">Total return</div><div class="v" id="ret">—</div></div>
+    <div class="stat"><div class="k">SPY same period</div><div class="v" id="spy">—</div></div>
+    <div class="stat"><div class="k">vs SPY</div><div class="v" id="alpha">—</div></div>
+  </div>
+  <div class="card" style="position:relative">
+    <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Portfolio</span><span><i class="sw" style="background:var(--s2)"></i>SPY (same $ start)</span></div>
+    <div id="chart"></div><div class="tip" id="tip"></div>
+    <details style="margin-top:8px"><summary class="sub">Show as table</summary><div id="tbl"></div></details>
+  </div>
+  <div class="card"><div class="row"><b>Holdings</b><span class="sub" id="cash"></span></div><div id="pos"></div></div>
+</section>
+<section id="v-trades" class="view"><h1>Decisions</h1><div class="sub">Every buy and sell, with the reasoning at the time. Tap to expand.</div><div class="card" id="dec"></div></section>
+<section id="v-scan" class="view"><h1>Latest scan</h1><div class="sub">Every symbol's score from the last run (−1 to +1). Buys need +0.15; top 6 are held.</div><div class="card" id="scan"></div></section>
+<nav><button class="on" data-v="home">Portfolio</button><button data-v="trades">Decisions</button><button data-v="scan">Scan</button></nav>
+
+<script>
+const $=id=>document.getElementById(id);
+const usd=v=>v==null?'—':'$'+Number(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct=v=>v==null||isNaN(v)?'—':(v>=0?'+':'−')+Math.abs(v*100).toFixed(2)+'%';
+const cls=v=>v>0?'up':v<0?'down':'';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtT=t=>new Date(t).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+b.dataset.v));
+  scrollTo(0,0);
+});
+
+async function get(f,d){try{const r=await fetch('data/'+f+'?'+Date.now());return r.ok?await r.json():d}catch(e){return d}}
+
+function chart(curve){
+  const el=$('chart'); if(curve.length<2){el.innerHTML='<div class="empty">Chart appears after the second run.</div>';return}
+  const e0=curve[0].equity, s0=curve.find(p=>p.spy)?.spy;
+  const pts=curve.map((p,i)=>({i,t:p.t,a:p.equity,b:s0&&p.spy?e0*p.spy/s0:null}));
+  const W=el.clientWidth||340,H=200,L=52,R=10,T=10,B=22;
+  const vals=pts.flatMap(p=>[p.a,p.b]).filter(v=>v!=null);
+  let lo=Math.min(...vals),hi=Math.max(...vals); const pad=(hi-lo)*.1||e0*.005; lo-=pad;hi+=pad;
+  const x=i=>L+(W-L-R)*i/(pts.length-1), y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+  const path=k=>pts.filter(p=>p[k]!=null).map((p,j)=>(j?'L':'M')+x(p.i).toFixed(1)+','+y(p[k]).toFixed(1)).join('');
+  let g='';for(let k=0;k<=3;k++){const v=lo+(hi-lo)*k/3;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--t3)">$${(v/1000).toFixed(1)}k</text>`}
+  const d0=fmtT(pts[0].t).split(',')[0], d1=fmtT(pts.at(-1).t).split(',')[0];
+  g+=`<text x="${L}" y="${H-4}" font-size="10" fill="var(--t3)">${d0}</text><text x="${W-R}" y="${H-4}" text-anchor="end" font-size="10" fill="var(--t3)">${d1}</text>`;
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" height="${H}">${g}
+   <path d="${path('b')}" fill="none" stroke="var(--s2)" stroke-width="2" stroke-linejoin="round"/>
+   <path d="${path('a')}" fill="none" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>
+   <line id="xh" y1="${T}" y2="${H-B}" stroke="var(--t3)" stroke-dasharray="3 3" visibility="hidden"/>
+   <circle id="da" r="4.5" fill="var(--s1)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>
+   <circle id="db" r="4.5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>
+   <rect x="${L}" y="0" width="${W-L-R}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  const svg=el.querySelector('svg'),tip=$('tip');
+  const move=ev=>{const r=svg.getBoundingClientRect();const cx=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;
+    const i=Math.max(0,Math.min(pts.length-1,Math.round((cx*W/r.width-L)/(W-L-R)*(pts.length-1))));const p=pts[i];
+    svg.querySelector('#xh').setAttribute('x1',x(i));svg.querySelector('#xh').setAttribute('x2',x(i));svg.querySelector('#xh').setAttribute('visibility','visible');
+    for(const [id,k] of [['da','a'],['db','b']]){const c=svg.querySelector('#'+id);if(p[k]==null){c.setAttribute('visibility','hidden');continue}
+      c.setAttribute('cx',x(i));c.setAttribute('cy',y(p[k]));c.setAttribute('visibility','visible')}
+    tip.innerHTML=`<b>${fmtT(p.t)}</b><br><i class="sw" style="background:var(--s1)"></i>Portfolio ${usd(p.a)}<br><i class="sw" style="background:var(--s2)"></i>SPY ${usd(p.b)}`;
+    tip.style.display='block';const tx=x(i)*r.width/W;tip.style.left=Math.min(Math.max(tx-70,4),r.width-150)+14+'px';tip.style.top='40px'};
+  const out=()=>{tip.style.display='none';['xh','da','db'].forEach(id=>svg.querySelector('#'+id).setAttribute('visibility','hidden'))};
+  svg.addEventListener('pointermove',move);svg.addEventListener('touchmove',move,{passive:true});svg.addEventListener('pointerleave',out);svg.addEventListener('touchend',out);
+  $('tbl').innerHTML='<table><tr><th>Time</th><th>Portfolio</th><th>SPY equiv.</th></tr>'+pts.slice().reverse().slice(0,60).map(p=>`<tr><td>${fmtT(p.t)}</td><td>${usd(p.a)}</td><td>${usd(p.b)}</td></tr>`).join('')+'</table>';
+}
+
+function reasons(list){return list&&list.length?'<ul class="r">'+list.map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>':''}
+
+async function load(){
+  const [st,curve,dec]=await Promise.all([get('state.json',null),get('equity.json',[]),get('decisions.json',[])]);
+  if(!st){$('updated').textContent='No runs yet — the bot starts trading at the next market session.';return}
+  $('equity').textContent=usd(st.equity);
+  $('updated').textContent='Updated '+fmtT(st.updated);
+  const start=st.start_equity||curve[0]?.equity, ret=st.equity/start-1;
+  const s0=curve.find(p=>p.spy)?.spy, s1=[...curve].reverse().find(p=>p.spy)?.spy, sr=s0&&s1?s1/s0-1:null;
+  $('ret').textContent=pct(ret);$('ret').className='v '+cls(ret);
+  $('spy').textContent=pct(sr);$('spy').className='v '+cls(sr);
+  const a=sr==null?null:ret-sr;$('alpha').textContent=a==null?'—':pct(a).replace('%',' pts');$('alpha').className='v '+cls(a);
+  $('cash').textContent='Cash '+usd(st.cash);
+  $('pos').innerHTML=st.positions.length?st.positions.map(p=>`<details class="item"><summary><div class="row"><span><span class="sym">${p.symbol}</span> <span class="sub">${(+p.qty).toFixed(p.qty%1?3:0)} sh</span></span><span>${usd(p.value)}</span></div>
+     <div class="row sub"><span>entry ${usd(p.entry)} → ${usd(p.price)}</span><span class="${cls(p.pl)}">${pct(p.pl)}</span></div></summary>
+     <div class="why">Current score ${p.score==null?'—':(p.score>=0?'+':'')+p.score.toFixed(2)}</div>${reasons(p.reasons)}</details>`).join(''):'<div class="empty">All cash right now.</div>';
+  chart(curve);
+  $('dec').innerHTML=dec.length?dec.slice(0,300).map(d=>`<details class="item ${d.side}"><summary><div class="row"><span><span class="tag">${d.side.toUpperCase()}</span> <span class="sym">${d.symbol}</span> <span class="sub">${usd(d.usd)}</span></span><span class="sub">${fmtT(d.t)}</span></div>
+     <div class="why">${esc(d.why)}${d.status==='error'?' · <b class="down">failed: '+esc(d.error)+'</b>':''}</div></summary>${reasons(d.reasons)}</details>`).join(''):'<div class="empty">No trades yet.</div>';
+  const held=new Set(st.positions.map(p=>p.symbol));
+  $('scan').innerHTML=st.scores.map((s,i)=>{const w=Math.min(Math.abs(s.score),1)*50;return `<details class="item"><summary><div class="row"><span><span class="sub">#${i+1}</span> <span class="sym">${s.symbol}</span> ${held.has(s.symbol)?'<span class="tag">HELD</span>':''}${s.shock?' <span class="tag down">NEWS SHOCK</span>':''}</span><span class="${cls(s.score)}">${(s.score>=0?'+':'')+s.score.toFixed(2)}</span></div>
+     <div class="bar"><i style="left:${s.score>=0?50:50-w}%;width:${w}%;background:${s.score>=0?'var(--good)':'var(--bad)'}"></i><i style="left:50%;width:1px;background:var(--t3)"></i></div></summary>${reasons(s.reasons)}</details>`}).join('');
+}
+load();setInterval(load,60000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});
+</script>
+</body>
+</html>
