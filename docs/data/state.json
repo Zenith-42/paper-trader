@@ -1,0 +1,898 @@
+{
+ "updated": "2026-11-24T15:12:35-05:00",
+ "equity": 99989.81,
+ "cash": 17174.28,
+ "start_equity": 99989.81,
+ "highs": {
+  "AAPL": 352.2,
+  "AMZN": 251.565,
+  "COST": 1090.17,
+  "LLY": 1411.475,
+  "XLF": 56.015,
+  "XLV": 184.865
+ },
+ "positions": [
+  {
+   "symbol": "XLV",
+   "qty": 86.5472,
+   "value": 15999.5573,
+   "entry": 184.87,
+   "price": 184.865,
+   "pl": -0.0,
+   "score": 0.5498,
+   "reasons": [
+    "20d +3.1%, 60d +8.8% (momentum rank +0.89)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 56",
+    "history: 107 similar setups, 51% rose, avg +0.11% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "AAPL",
+   "qty": 45.4254,
+   "value": 15998.82,
+   "entry": 352.2258,
+   "price": 352.2,
+   "pl": -0.0001,
+   "score": 0.5849,
+   "reasons": [
+    "20d +1.6%, 60d +11.3% (momentum rank +0.84)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 55",
+    "history: 92 similar setups, 53% rose, avg -0.12% over next 5d",
+    "news +0.24 from 5 headlines \u2014 \"Apple to Host Special Event at SoHo Store Marking 20 Years of (RED) Partnership\""
+   ]
+  },
+  {
+   "symbol": "COST",
+   "qty": 14.6744,
+   "value": 15997.6421,
+   "entry": 1090.33,
+   "price": 1090.17,
+   "pl": -0.0001,
+   "score": 0.5177,
+   "reasons": [
+    "20d +13.1%, 60d +18.9% (momentum rank +1.00)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 72",
+    "history: 25 similar setups, 56% rose, avg -0.33% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "LLY",
+   "qty": 11.3336,
+   "value": 15997.0999,
+   "entry": 1411.73,
+   "price": 1411.475,
+   "pl": -0.0002,
+   "score": 0.4702,
+   "reasons": [
+    "20d +10.2%, 60d +22.2% (momentum rank +0.95)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 60",
+    "history: 96 similar setups, 57% rose, avg +0.74% over next 5d",
+    "news -0.93 from 1 headlines \u2014 \"Eli Lilly and Company to Present New Breast Cancer Portfolio Data at Upcoming Symposium\""
+   ]
+  },
+  {
+   "symbol": "AMZN",
+   "qty": 59.0,
+   "value": 14842.335,
+   "entry": 251.6159,
+   "price": 251.565,
+   "pl": -0.0002,
+   "score": 0.4716,
+   "reasons": [
+    "20d -0.6%, 60d -3.1% (momentum rank +0.58)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 46",
+    "history: 25 similar setups, 76% rose, avg +3.23% over next 5d",
+    "news +0.43 from 4 headlines \u2014 \"Amazon Web Services Collaborates with Great Ormond Street Hospital on Agentic AI Programme\""
+   ]
+  },
+  {
+   "symbol": "XLF",
+   "qty": 98.0,
+   "value": 5489.47,
+   "entry": 56.02,
+   "price": 56.015,
+   "pl": -0.0001,
+   "score": 0.2829,
+   "reasons": [
+    "20d +0.2%, 60d -2.6% (momentum rank +0.53)",
+    "trend 3/4 (price vs 20/50/200-day avg)",
+    "RSI 47",
+    "history: too few similar setups",
+    "news: none in 24h"
+   ]
+  }
+ ],
+ "scores": [
+  {
+   "symbol": "AAPL",
+   "score": 0.5849,
+   "parts": {
+    "momentum": 0.842,
+    "trend": 1.0,
+    "history": 0.036,
+    "news": 0.367,
+    "rsi": 0.2
+   },
+   "price": 352.24,
+   "shock": false,
+   "reasons": [
+    "20d +1.6%, 60d +11.3% (momentum rank +0.84)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 55",
+    "history: 92 similar setups, 53% rose, avg -0.12% over next 5d",
+    "news +0.24 from 5 headlines \u2014 \"Apple to Host Special Event at SoHo Store Marking 20 Years of (RED) Partnership\""
+   ]
+  },
+  {
+   "symbol": "XLV",
+   "score": 0.5498,
+   "parts": {
+    "momentum": 0.895,
+    "trend": 1.0,
+    "history": 0.057,
+    "news": 0.0,
+    "rsi": 0.2
+   },
+   "price": 184.82,
+   "shock": false,
+   "reasons": [
+    "20d +3.1%, 60d +8.8% (momentum rank +0.89)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 56",
+    "history: 107 similar setups, 51% rose, avg +0.11% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "COST",
+   "score": 0.5177,
+   "parts": {
+    "momentum": 1.0,
+    "trend": 1.0,
+    "history": 0.038,
+    "news": 0.0,
+    "rsi": -0.4
+   },
+   "price": 1089.7,
+   "shock": false,
+   "reasons": [
+    "20d +13.1%, 60d +18.9% (momentum rank +1.00)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 72",
+    "history: 25 similar setups, 56% rose, avg -0.33% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "AMZN",
+   "score": 0.4716,
+   "parts": {
+    "momentum": 0.579,
+    "trend": 0.0,
+    "history": 1.0,
+    "news": 0.652,
+    "rsi": 0.0
+   },
+   "price": 251.59,
+   "shock": false,
+   "reasons": [
+    "20d -0.6%, 60d -3.1% (momentum rank +0.58)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 46",
+    "history: 25 similar setups, 76% rose, avg +3.23% over next 5d",
+    "news +0.43 from 4 headlines \u2014 \"Amazon Web Services Collaborates with Great Ormond Street Hospital on Agentic AI Programme\""
+   ]
+  },
+  {
+   "symbol": "LLY",
+   "score": 0.4702,
+   "parts": {
+    "momentum": 0.947,
+    "trend": 1.0,
+    "history": 0.33,
+    "news": -1.0,
+    "rsi": 0.2
+   },
+   "price": 1411.455,
+   "shock": false,
+   "reasons": [
+    "20d +10.2%, 60d +22.2% (momentum rank +0.95)",
+    "trend 4/4 (price vs 20/50/200-day avg)",
+    "RSI 60",
+    "history: 96 similar setups, 57% rose, avg +0.74% over next 5d",
+    "news -0.93 from 1 headlines \u2014 \"Eli Lilly and Company to Present New Breast Cancer Portfolio Data at Upcoming Symposium\""
+   ]
+  },
+  {
+   "symbol": "XLF",
+   "score": 0.2829,
+   "parts": {
+    "momentum": 0.526,
+    "trend": 0.5,
+    "history": 0.0,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 56.01,
+   "shock": false,
+   "reasons": [
+    "20d +0.2%, 60d -2.6% (momentum rank +0.53)",
+    "trend 3/4 (price vs 20/50/200-day avg)",
+    "RSI 47",
+    "history: too few similar setups",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "TSLA",
+   "score": 0.2634,
+   "parts": {
+    "momentum": 0.684,
+    "trend": 0.0,
+    "history": 0.191,
+    "news": 0.0,
+    "rsi": 0.2
+   },
+   "price": 382.17,
+   "shock": false,
+   "reasons": [
+    "20d -6.2%, 60d +3.9% (momentum rank +0.68)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 51",
+    "history: 19 similar setups, 53% rose, avg +0.55% over next 5d",
+    "news +0.00 from 2 headlines"
+   ]
+  },
+  {
+   "symbol": "TLT",
+   "score": 0.2544,
+   "parts": {
+    "momentum": 0.789,
+    "trend": 0.0,
+    "history": -0.012,
+    "news": 0.0,
+    "rsi": 0.2
+   },
+   "price": 81.63,
+   "shock": false,
+   "reasons": [
+    "20d +0.4%, 60d +0.1% (momentum rank +0.79)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 60",
+    "history: 46 similar setups, 52% rose, avg -0.22% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "MSFT",
+   "score": 0.2273,
+   "parts": {
+    "momentum": 0.474,
+    "trend": 0.0,
+    "history": -0.19,
+    "news": 0.822,
+    "rsi": 0.0
+   },
+   "price": 493.82,
+   "shock": false,
+   "reasons": [
+    "20d -6.9%, 60d -2.5% (momentum rank +0.47)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 40",
+    "history: 65 similar setups, 46% rose, avg -0.45% over next 5d",
+    "news +0.55 from 2 headlines \u2014 \"Microsoft Secures 51MW Geothermal Energy Contract in New Zealand\""
+   ]
+  },
+  {
+   "symbol": "AMD",
+   "score": 0.2243,
+   "parts": {
+    "momentum": 0.368,
+    "trend": -0.5,
+    "history": 1.0,
+    "news": 0.259,
+    "rsi": 0.0
+   },
+   "price": 411.71,
+   "shock": false,
+   "reasons": [
+    "20d -26.5%, 60d -12.5% (momentum rank +0.37)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 39",
+    "history: 51 similar setups, 78% rose, avg +4.43% over next 5d",
+    "news +0.17 from 3 headlines \u2014 \"BNP Paribas Adjusts Price Target for AMD\""
+   ]
+  },
+  {
+   "symbol": "META",
+   "score": 0.2195,
+   "parts": {
+    "momentum": 0.632,
+    "trend": -0.5,
+    "history": 0.472,
+    "news": 0.404,
+    "rsi": 0.0
+   },
+   "price": 589.65,
+   "shock": false,
+   "reasons": [
+    "20d -4.9%, 60d +3.1% (momentum rank +0.63)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 40",
+    "history: 73 similar setups, 56% rose, avg +1.40% over next 5d",
+    "news +0.27 from 3 headlines \u2014 \"Meta Launches Muse AI in the UK\""
+   ]
+  },
+  {
+   "symbol": "XOM",
+   "score": 0.1694,
+   "parts": {
+    "momentum": 0.263,
+    "trend": 0.0,
+    "history": 0.452,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 158.94,
+   "shock": false,
+   "reasons": [
+    "20d -11.1%, 60d -0.6% (momentum rank +0.26)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 38",
+    "history: 43 similar setups, 60% rose, avg +0.97% over next 5d",
+    "news +0.00 from 1 headlines"
+   ]
+  },
+  {
+   "symbol": "ANET",
+   "score": 0.1451,
+   "parts": {
+    "momentum": 0.421,
+    "trend": -0.5,
+    "history": 1.0,
+    "news": -0.375,
+    "rsi": 0.0
+   },
+   "price": 167.12,
+   "shock": false,
+   "reasons": [
+    "20d -10.6%, 60d -14.6% (momentum rank +0.42)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 42",
+    "history: 46 similar setups, 78% rose, avg +5.57% over next 5d",
+    "news -0.25 from 1 headlines \u2014 \"BNP Paribas Adjusts Price Target on Arista Networks to $260 From $290\""
+   ]
+  },
+  {
+   "symbol": "PLTR",
+   "score": 0.0243,
+   "parts": {
+    "momentum": -0.105,
+    "trend": 0.0,
+    "history": 0.28,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 160.46,
+   "shock": false,
+   "reasons": [
+    "20d -19.3%, 60d -13.9% (momentum rank -0.11)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 43",
+    "history: 65 similar setups, 49% rose, avg +1.18% over next 5d",
+    "news +0.00 from 1 headlines"
+   ]
+  },
+  {
+   "symbol": "XLE",
+   "score": 0.0161,
+   "parts": {
+    "momentum": -0.421,
+    "trend": 0.0,
+    "history": 0.712,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 60.585,
+   "shock": false,
+   "reasons": [
+    "20d -11.2%, 60d -4.7% (momentum rank -0.42)",
+    "trend 2/4 (price vs 20/50/200-day avg)",
+    "RSI 37",
+    "history: 37 similar setups, 68% rose, avg +1.44% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "GE",
+   "score": -0.0049,
+   "parts": {
+    "momentum": 0.737,
+    "trend": -0.5,
+    "history": -1.0,
+    "news": 0.661,
+    "rsi": 0.0
+   },
+   "price": 317.67,
+   "shock": false,
+   "reasons": [
+    "20d +6.7%, 60d -5.2% (momentum rank +0.74)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 49",
+    "history: 17 similar setups, 24% rose, avg -3.17% over next 5d",
+    "news +0.44 from 1 headlines \u2014 \"GE Aerospace Announces Defense & Systems Leadership Transition\""
+   ]
+  },
+  {
+   "symbol": "NVDA",
+   "score": -0.028,
+   "parts": {
+    "momentum": 0.105,
+    "trend": -0.5,
+    "history": 0.327,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 152.585,
+   "shock": false,
+   "reasons": [
+    "20d -30.0%, 60d -30.8% (momentum rank +0.11)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 39",
+    "history: 44 similar setups, 59% rose, avg +0.58% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "AVGO",
+   "score": -0.0558,
+   "parts": {
+    "momentum": 0.316,
+    "trend": -1.0,
+    "history": 0.778,
+    "news": -0.375,
+    "rsi": 0.0
+   },
+   "price": 302.11,
+   "shock": false,
+   "reasons": [
+    "20d -11.7%, 60d -18.3% (momentum rank +0.32)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 41",
+    "history: 97 similar setups, 64% rose, avg +2.24% over next 5d",
+    "news -0.25 from 1 headlines \u2014 \"BNP Paribas Adjusts Broadcom Price Target\""
+   ]
+  },
+  {
+   "symbol": "MU",
+   "score": -0.0706,
+   "parts": {
+    "momentum": -0.263,
+    "trend": -0.5,
+    "history": 0.667,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 627.575,
+   "shock": false,
+   "reasons": [
+    "20d -32.4%, 60d -34.5% (momentum rank -0.26)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 37",
+    "history: 36 similar setups, 58% rose, avg +2.18% over next 5d",
+    "news +0.00 from 1 headlines"
+   ]
+  },
+  {
+   "symbol": "JPM",
+   "score": -0.0919,
+   "parts": {
+    "momentum": -0.368,
+    "trend": -0.5,
+    "history": 0.064,
+    "news": 0.871,
+    "rsi": 0.0
+   },
+   "price": 316.49,
+   "shock": false,
+   "reasons": [
+    "20d -5.7%, 60d -10.7% (momentum rank -0.37)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 37",
+    "history: 62 similar setups, 52% rose, avg +0.13% over next 5d",
+    "news +0.58 from 4 headlines \u2014 \"J.P. Morgan Asset Management Announces Listing Transfer for JPMorgan Active Bond ETF\""
+   ]
+  },
+  {
+   "symbol": "SPY",
+   "score": -0.1175,
+   "parts": {
+    "momentum": 0.211,
+    "trend": -0.5,
+    "history": -0.278,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 716.66,
+   "shock": false,
+   "reasons": [
+    "20d -6.9%, 60d -6.3% (momentum rank +0.21)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 40",
+    "history: 34 similar setups, 38% rose, avg -0.17% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "UBER",
+   "score": -0.1336,
+   "parts": {
+    "momentum": 0.053,
+    "trend": -1.0,
+    "history": 0.384,
+    "news": 0.159,
+    "rsi": 0.0
+   },
+   "price": 64.86,
+   "shock": false,
+   "reasons": [
+    "20d -1.4%, 60d -14.3% (momentum rank +0.05)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 40",
+    "history: 91 similar setups, 59% rose, avg +0.79% over next 5d",
+    "news +0.11 from 3 headlines \u2014 \"Uber Pilots \"Record My Ride\" Feature in Select U.S. Cities\""
+   ]
+  },
+  {
+   "symbol": "UNH",
+   "score": -0.1548,
+   "parts": {
+    "momentum": -0.579,
+    "trend": -0.5,
+    "history": 0.06,
+    "news": 0.879,
+    "rsi": 0.0
+   },
+   "price": 344.25,
+   "shock": false,
+   "reasons": [
+    "20d -16.1%, 60d -11.1% (momentum rank -0.58)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 34",
+    "history: 62 similar setups, 50% rose, avg +0.24% over next 5d",
+    "news +0.59 from 1 headlines \u2014 \"UnitedHealth Group Faces Market Pressure Following CMS Medicare Advantage Audit Proposal\""
+   ]
+  },
+  {
+   "symbol": "SMH",
+   "score": -0.1777,
+   "parts": {
+    "momentum": -0.316,
+    "trend": -0.5,
+    "history": 0.21,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 426.96,
+   "shock": false,
+   "reasons": [
+    "20d -23.5%, 60d -23.3% (momentum rank -0.32)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 38",
+    "history: 44 similar setups, 55% rose, avg +0.48% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "ORCL",
+   "score": -0.2074,
+   "parts": {
+    "momentum": 0.0,
+    "trend": -1.0,
+    "history": -0.12,
+    "news": 0.444,
+    "rsi": 0.0
+   },
+   "price": 108.88,
+   "shock": false,
+   "reasons": [
+    "20d -16.6%, 60d -26.7% (momentum rank +0.00)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 41",
+    "history: 96 similar setups, 44% rose, avg +0.02% over next 5d",
+    "news +0.30 from 1 headlines \u2014 \"Oracle Commodity Holding Restores Royalty on Pulacayo-Paca Silver Project\""
+   ]
+  },
+  {
+   "symbol": "UPRO",
+   "score": -0.21,
+   "parts": {
+    "momentum": -0.158,
+    "trend": -0.5,
+    "history": -0.188,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 116.64,
+   "shock": false,
+   "reasons": [
+    "20d -22.0%, 60d -22.2% (momentum rank -0.16)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 38",
+    "history: 42 similar setups, 43% rose, avg -0.18% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "QQQ",
+   "score": -0.2118,
+   "parts": {
+    "momentum": -0.211,
+    "trend": -0.5,
+    "history": -0.118,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 636.07,
+   "shock": false,
+   "reasons": [
+    "20d -11.8%, 60d -11.2% (momentum rank -0.21)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 39",
+    "history: 49 similar setups, 45% rose, avg -0.06% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "IWM",
+   "score": -0.263,
+   "parts": {
+    "momentum": 0.158,
+    "trend": -1.0,
+    "history": -0.302,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 267.11,
+   "shock": false,
+   "reasons": [
+    "20d -4.7%, 60d -8.9% (momentum rank +0.16)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 43",
+    "history: 56 similar setups, 38% rose, avg -0.21% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "CRM",
+   "score": -0.3277,
+   "parts": {
+    "momentum": -0.842,
+    "trend": -0.5,
+    "history": -0.5,
+    "news": 1.0,
+    "rsi": 0.0
+   },
+   "price": 192.43,
+   "shock": false,
+   "reasons": [
+    "20d -20.1%, 60d -25.2% (momentum rank -0.84)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 34",
+    "history: 59 similar setups, 47% rose, avg -1.80% over next 5d",
+    "news +0.82 from 1 headlines \u2014 \"Salesforce Joins Industry Backing for Open Standard in AI Agent Context Sharing\""
+   ]
+  },
+  {
+   "symbol": "TQQQ",
+   "score": -0.331,
+   "parts": {
+    "momentum": -0.474,
+    "trend": -0.5,
+    "history": -0.32,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 45.72,
+   "shock": false,
+   "reasons": [
+    "20d -35.6%, 60d -36.3% (momentum rank -0.47)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 36",
+    "history: 62 similar setups, 44% rose, avg -0.76% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "XLK",
+   "score": -0.3331,
+   "parts": {
+    "momentum": -0.632,
+    "trend": -0.5,
+    "history": -0.093,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 156.39,
+   "shock": false,
+   "reasons": [
+    "20d -17.5%, 60d -16.0% (momentum rank -0.63)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 37",
+    "history: 46 similar setups, 50% rose, avg -0.37% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "SOXL",
+   "score": -0.3341,
+   "parts": {
+    "momentum": -0.053,
+    "trend": -1.0,
+    "history": -0.342,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 32.81,
+   "shock": false,
+   "reasons": [
+    "20d -67.5%, 60d -70.9% (momentum rank -0.05)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 33",
+    "history: 66 similar setups, 52% rose, avg -1.49% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "ARKK",
+   "score": -0.3649,
+   "parts": {
+    "momentum": -0.684,
+    "trend": -0.5,
+    "history": -0.173,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 67.19,
+   "shock": false,
+   "reasons": [
+    "20d -20.7%, 60d -21.5% (momentum rank -0.68)",
+    "trend 1/4 (price vs 20/50/200-day avg)",
+    "RSI 35",
+    "history: 58 similar setups, 47% rose, avg -0.42% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "GOOGL",
+   "score": -0.4211,
+   "parts": {
+    "momentum": -0.526,
+    "trend": -1.0,
+    "history": -0.066,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 277.42,
+   "shock": false,
+   "reasons": [
+    "20d -13.5%, 60d -18.2% (momentum rank -0.53)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 39",
+    "history: 63 similar setups, 49% rose, avg -0.20% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "GS",
+   "score": -0.5064,
+   "parts": {
+    "momentum": -0.737,
+    "trend": -1.0,
+    "history": -0.199,
+    "news": 0.029,
+    "rsi": 0.0
+   },
+   "price": 804.89,
+   "shock": false,
+   "reasons": [
+    "20d -11.7%, 60d -21.2% (momentum rank -0.74)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 35",
+    "history: 59 similar setups, 42% rose, avg -0.18% over next 5d",
+    "news +0.02 from 4 headlines \u2014 \"Goldman Sachs Updates Price Target for Dubai Electricity and Water Authority\""
+   ]
+  },
+  {
+   "symbol": "GLD",
+   "score": -0.5901,
+   "parts": {
+    "momentum": -0.895,
+    "trend": -1.0,
+    "history": -0.359,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 325.565,
+   "shock": false,
+   "reasons": [
+    "20d -12.5%, 60d -20.3% (momentum rank -0.89)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 30",
+    "history: 82 similar setups, 41% rose, avg -0.75% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "CAT",
+   "score": -0.6022,
+   "parts": {
+    "momentum": -0.789,
+    "trend": -1.0,
+    "history": -0.577,
+    "news": 0.0,
+    "rsi": 0.0
+   },
+   "price": 541.1,
+   "shock": false,
+   "reasons": [
+    "20d -24.1%, 60d -32.0% (momentum rank -0.79)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 34",
+    "history: 52 similar setups, 46% rose, avg -2.01% over next 5d",
+    "news: none in 24h"
+   ]
+  },
+  {
+   "symbol": "COIN",
+   "score": -0.6232,
+   "parts": {
+    "momentum": -1.0,
+    "trend": -1.0,
+    "history": 0.0,
+    "news": -0.288,
+    "rsi": -0.3
+   },
+   "price": 103.17,
+   "shock": false,
+   "reasons": [
+    "20d -36.0%, 60d -45.2% (momentum rank -1.00)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 28",
+    "history: too few similar setups",
+    "news -0.19 from 3 headlines \u2014 \"California Court Dismisses UST Class-Action Lawsuit Against Coinbase\""
+   ]
+  },
+  {
+   "symbol": "NFLX",
+   "score": -0.7078,
+   "parts": {
+    "momentum": -0.947,
+    "trend": -1.0,
+    "history": -0.668,
+    "news": -0.267,
+    "rsi": 0.0
+   },
+   "price": 58.96,
+   "shock": false,
+   "reasons": [
+    "20d -5.7%, 60d -27.3% (momentum rank -0.95)",
+    "trend 0/4 (price vs 20/50/200-day avg)",
+    "RSI 37",
+    "history: 113 similar setups, 31% rose, avg -1.15% over next 5d",
+    "news -0.18 from 1 headlines \u2014 \"German Voice Actors Protest Netflix Over AI Usage\""
+   ]
+  }
+ ],
+ "last_run": {
+  "orders": 6,
+  "errors": 0
+ }
+}

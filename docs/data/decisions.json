@@ -1,0 +1,110 @@
+[
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "XLF",
+  "usd": 16000.0,
+  "price": 56.01,
+  "status": "pending_new",
+  "why": "Rank #6 with score +0.28",
+  "error": null,
+  "score": 0.2829,
+  "reasons": [
+   "20d +0.2%, 60d -2.6% (momentum rank +0.53)",
+   "trend 3/4 (price vs 20/50/200-day avg)",
+   "RSI 47",
+   "history: too few similar setups",
+   "news: none in 24h"
+  ]
+ },
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "LLY",
+  "usd": 16000.0,
+  "price": 1411.455,
+  "status": "pending_new",
+  "why": "Rank #5 with score +0.47",
+  "error": null,
+  "score": 0.4702,
+  "reasons": [
+   "20d +10.2%, 60d +22.2% (momentum rank +0.95)",
+   "trend 4/4 (price vs 20/50/200-day avg)",
+   "RSI 60",
+   "history: 96 similar setups, 57% rose, avg +0.74% over next 5d",
+   "news -0.93 from 1 headlines \u2014 \"Eli Lilly and Company to Present New Breast Cancer Portfolio Data at Upcoming Symposium\""
+  ]
+ },
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "AMZN",
+  "usd": 16000.0,
+  "price": 251.59,
+  "status": "pending_new",
+  "why": "Rank #4 with score +0.47",
+  "error": null,
+  "score": 0.4716,
+  "reasons": [
+   "20d -0.6%, 60d -3.1% (momentum rank +0.58)",
+   "trend 2/4 (price vs 20/50/200-day avg)",
+   "RSI 46",
+   "history: 25 similar setups, 76% rose, avg +3.23% over next 5d",
+   "news +0.43 from 4 headlines \u2014 \"Amazon Web Services Collaborates with Great Ormond Street Hospital on Agentic AI Programme\""
+  ]
+ },
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "COST",
+  "usd": 16000.0,
+  "price": 1089.7,
+  "status": "pending_new",
+  "why": "Rank #3 with score +0.52",
+  "error": null,
+  "score": 0.5177,
+  "reasons": [
+   "20d +13.1%, 60d +18.9% (momentum rank +1.00)",
+   "trend 4/4 (price vs 20/50/200-day avg)",
+   "RSI 72",
+   "history: 25 similar setups, 56% rose, avg -0.33% over next 5d",
+   "news: none in 24h"
+  ]
+ },
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "XLV",
+  "usd": 16000.0,
+  "price": 184.82,
+  "status": "pending_new",
+  "why": "Rank #2 with score +0.55",
+  "error": null,
+  "score": 0.5498,
+  "reasons": [
+   "20d +3.1%, 60d +8.8% (momentum rank +0.89)",
+   "trend 4/4 (price vs 20/50/200-day avg)",
+   "RSI 56",
+   "history: 107 similar setups, 51% rose, avg +0.11% over next 5d",
+   "news: none in 24h"
+  ]
+ },
+ {
+  "t": "2026-11-24T15:12:35-05:00",
+  "side": "buy",
+  "symbol": "AAPL",
+  "usd": 16000.0,
+  "price": 352.24,
+  "status": "pending_new",
+  "why": "Rank #1 with score +0.58",
+  "error": null,
+  "score": 0.5849,
+  "reasons": [
+   "20d +1.6%, 60d +11.3% (momentum rank +0.84)",
+   "trend 4/4 (price vs 20/50/200-day avg)",
+   "RSI 55",
+   "history: 92 similar setups, 53% rose, avg -0.12% over next 5d",
+   "news +0.24 from 5 headlines \u2014 \"Apple to Host Special Event at SoHo Store Marking 20 Years of (RED) Partnership\""
+  ]
+ }
+]
